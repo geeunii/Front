@@ -7,6 +7,8 @@ import RefEx1 from './components/RefEx1.vue';
 import RefEx2 from './components/RefEx2.vue';
 import ComputedEx1 from './components/ComputedEx1.vue';
 import ComputedEx2 from './components/ComputedEx2.vue';
+import RevEx3 from './components/RevEx3.vue';
+import ArrayRefEx1 from './components/ArrayRefEx1.vue';
 </script>
 
 <template>
@@ -22,5 +24,8 @@ import ComputedEx2 from './components/ComputedEx2.vue';
   <!-- <RefEx2></RefEx2> -->
   <!-- <ComputedEx1></ComputedEx1>
   ################ -->
-  <ComputedEx2></ComputedEx2>
+  <!-- <ComputedEx2></ComputedEx2> -->
+  <RevEx3 />
+  ################
+  <ArrayRefEx1 />
 </template>
