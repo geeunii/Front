@@ -23,6 +23,10 @@ export default {
     onDeleteTodo(id) {
       this.$emit('delete-todo', id);
     },
+
+    onUpdateText(id, newText) {
+      this.$emit(`update-text`, id, newText);
+    },
   },
 };
 </script>
@@ -38,6 +42,7 @@ export default {
       :todo="todo"
       @toggle-todo="onToggleTodo"
       @delete-todo="onDeleteTodo"
+      @update-text="onUpdateText"
     />
   </div>
 </template>

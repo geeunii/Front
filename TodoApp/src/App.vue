@@ -65,6 +65,17 @@ export default {
       );
     },
 
+    // 수정
+    updateTodoText(id, newText) {
+      this.todos = this.todos.map((todo) => {
+        if (todo.id === id) {
+          // 해당 ID의 할 일 객체의 'text' 속성만 새로운 텍스트로 교체
+          return { ...todo, text: newText };
+        }
+        return todo;
+      });
+    },
+
     // 개별 삭제
     deleteTodo(id) {
       this.todos = this.todos.filter((todo) => todo.id !== id);
@@ -103,6 +114,7 @@ export default {
         :computed-todo="filteredTodos"
         @toggle-todo="toggleTodo"
         @delete-todo="deleteTodo"
+        @update-text="updateTodoText"
       />
     </div>
   </div>
