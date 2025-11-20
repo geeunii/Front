@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import AppPropsLiteral from './components/props/AppPropsLiteral.vue';
+import AppPropsObject from './components/props/AppPropsObject.vue';
 
 const view = ref('');
 </script>
@@ -12,20 +13,30 @@ const view = ref('');
       <button :class="{ active: view === 'literal' }" @click="view = 'literal'">
         Props Literal
       </button>
+
       <button :class="{ active: view === 'object' }" @click="view = 'object'">
         Props Object
       </button>
+
       <button
         :class="{ active: view === 'template' }"
         @click="view = 'template'"
       >
         Component Events (template)
       </button>
+
       <button :class="{ active: view === 'script' }" @click="view = 'script'">
         Component Events (script setup)
       </button>
     </div>
-    <AppPropsLiteral v-if="view === 'literal'" view-title="좋아하는 과일은?" />
+    <AppPropsLiteral
+      v-if="view === 'literal'"
+      view-title="좋아하는 과일은? Props Literal"
+    />
+    <AppPropsObject
+      v-if="view === 'object'"
+      view-title="좋아하는 과일은? (Object Data 전달)"
+    />
   </div>
 </template>
 
